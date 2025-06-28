@@ -8,8 +8,8 @@ amcl:
     alpha4: 0.1
     alpha5: 0.1
     base_frame_id: "base_footprint"
-    beam_skip_distance: 0.5
-    beam_skip_error_threshold: 0.9
+    beam_skip_distance: 0.3
+    beam_skip_error_threshold: 0.3
     beam_skip_threshold: 0.3
     do_beamskip: false
     global_frame_id: "map"
@@ -110,8 +110,8 @@ controller_server:
     # Goal checker parameters
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 0.25
-      yaw_goal_tolerance: 0.25
+      xy_goal_tolerance: 0.05
+      yaw_goal_tolerance: 0.1
       stateful: True
     # DWB parameters
     FollowPath:
@@ -136,20 +136,20 @@ controller_server:
       vx_samples: 20
       vy_samples: 5
       vtheta_samples: 20
-      sim_time: 1.7
+      sim_time: 2.0
       linear_granularity: 0.05
       angular_granularity: 0.025
       transform_tolerance: 0.2
-      xy_goal_tolerance: 0.25
-      trans_stopped_velocity: 0.001
+      xy_goal_tolerance: 0.05
+      trans_stopped_velocity: 0.005
       short_circuit_trajectory_evaluation: True
       stateful: True
       critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"]
       BaseObstacle.scale: 0.02
       PathAlign.scale: 32.0
-      PathAlign.forward_point_distance: 0.1
+      PathAlign.forward_point_distance: 0.05
       GoalAlign.scale: 24.0
-      GoalAlign.forward_point_distance: 0.1
+      GoalAlign.forward_point_distance: 0.05
       PathDist.scale: 32.0
       GoalDist.scale: 24.0
       RotateToGoal.scale: 32.0
@@ -178,7 +178,7 @@ local_costmap:
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 0.7
+        cost_scaling_factor: 10.0 
         inflation_radius: 0.11
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
@@ -236,8 +236,8 @@ global_costmap:
         map_subscribe_transient_local: True
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 0.7
-        inflation_radius: 0.13
+        cost_scaling_factor: 10.0
+        inflation_radius: 0.12
       always_send_full_costmap: True
   global_costmap_client:
     ros__parameters:
@@ -271,7 +271,7 @@ planner_server:
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
-      tolerance: 0.5
+      tolerance: 0.2
       use_astar: false
       allow_unknown: true
 
