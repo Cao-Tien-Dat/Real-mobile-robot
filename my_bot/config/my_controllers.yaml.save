@@ -1,4 +1,5 @@
 
+
 controller_manager:
   ros__parameters:
     update_rate: 30
@@ -19,7 +20,7 @@ diff_cont:
 
     left_wheel_names: ['khop_banh_trai']
     right_wheel_names: ['khop_banh_phai']
-    wheel_separation: 0.2
+    wheel_separation: 0.22
     wheel_radius: 0.0275
 
     use_stamped_vel: false
