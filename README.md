@@ -127,7 +127,7 @@ Dự án yêu cầu các gói sau (nên cài qua `rosdep` hoặc build thủ cô
 * `nav2_bringup`, `nav2_controller`, `nav2_planner`, ...
 * `robot_state_publisher`, `joint_state_publisher`
 * `teleop_twist_keyboard`
-* `rplidar_ros` (hoặc driver phù hợp với RPLIDAR C1)
+* `Sllidar_ros2` (hoặc driver phù hợp với RPLIDAR C1)
 * `pyserial` (nếu cần UART từ máy tính)
 
 ---
