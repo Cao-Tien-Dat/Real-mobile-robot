@@ -98,13 +98,22 @@ ros2 launch my_bot slam_cartographer_all_bringup.launch.py
 
 ```
 Real-mobile-robot/
-├── launch/                  # Các file launch ROS 2 cho SLAM
-├── odometry_publisher/     # Node đọc encoder từ ESP32 qua UART, xuất Odometry
-├── robot_description/      # URDF mô tả robot
-├── config/                 # File cấu hình (TF, SLAM, Nav2)
-├── maps/                   # Lưu bản đồ sau khi SLAM
-├── image/                  # Hình ảnh minh họa robot, sơ đồ kết nối
-└── README.md               # File mô tả này
+├── YDLidar-SDK/ # SDK YDLidar
+├── diffdrive_arduino/ # Gói điều khiển robot sử dụng esp32
+├── driver_uart/ # điều khiển UART/usb (giao tiếp ESP32 - Jetson)
+├── esp32_ros_bridge/ # Giao diện bridge giữa ESP32 và ROS 2
+├── joy_tester/ # Kiểm tra và xử lý tín hiệu joystick
+├── m-explore-ros2/ # Multi-robot autonomous exploration
+├── my_bot/ # URDF, launch file, mô tả robot chính
+├── navigation2/ # Nav2 framework
+├── rclcpp/ # Thư viện mẫu ROS 2 C++
+├── slam_gmapping/ # Thuật toán SLAM GMapping
+├── slam_toolbox/ # Thuật toán SLAM Toolbox
+├── slildar_ros2/ # Driver cho LiDAR => /scan
+├── teleop_twist_joy/ # Điều khiển robot bằng joystick
+├── ydlidar_ros2_driver/ # Driver ROS 2 cho YDLidar
+├── .gitignore
+└── README.md # File mô tả (bạn đang đọc)
 ```
 
 ---
