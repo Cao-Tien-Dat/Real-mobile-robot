@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/f9dde0d6-98b0-4d2c-be16-18c3bf96c243)# Real Mobile Robot
+![image](https://github.com/user-attachments/assets/ee8c6b0a-f1fb-4e91-929d-60f4d4ad5a5f)
+
+# Real Mobile Robot
 
 Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 Foxy**, **ESP32**, và **SLAM Toolbox** để điều hướng và tạo bản đồ môi trường trong thời gian thực.
 
@@ -14,7 +16,7 @@ Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 F
 - **Động cơ JGB37-520 có encoder**
 - **Driver L298N**
 - **Cảm biến RPLIDAR C1**
-- **2 hộp pin 18650 12V + module buck 5V cho Jetson**
+- **hộp pin 18650 4s + module buck 5V cho Jetson**
 
 ![Real Robot]
 ![image](https://github.com/user-attachments/assets/632166e1-1cce-4fc4-a510-a40c349a663b)
@@ -45,3 +47,27 @@ git clone https://github.com/Cao-Tien-Dat/Real-mobile-robot.git
 cd ~/colcon_ws
 colcon build
 source install/setup.bash
+#source
+mọi hướng dẫn đều có thể có trong từng file riêng
+#mit
+MIT License
+
+Copyright (c) 2025 Cao Tien Dat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     
+copies of the Software, and to permit persons to whom the Software is         
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all  
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+SOFTWARE.
