@@ -1,4 +1,4 @@
-# Real Mobile Robot
+![image](https://github.com/user-attachments/assets/f9dde0d6-98b0-4d2c-be16-18c3bf96c243)# Real Mobile Robot
 
 Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 Foxy**, **ESP32**, và **SLAM Toolbox** để điều hướng và tạo bản đồ môi trường trong thời gian thực.
 
@@ -16,8 +16,12 @@ Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 F
 - **Cảm biến RPLIDAR C1**
 - **2 hộp pin 18650 12V + module buck 5V cho Jetson**
 
-![Real Robot](./image/robot_real.png)
-![Sơ đồ phần cứng](./image/hardware_diagram.png)
+![Real Robot]
+![image](https://github.com/user-attachments/assets/632166e1-1cce-4fc4-a510-a40c349a663b)
+
+![Sơ đồ phần cứng]
+![image](https://github.com/user-attachments/assets/07672d40-98bf-4043-8ade-fe9123b17f3b)
+
 
 > 📌 *Bạn cần thêm các ảnh này vào thư mục `image/` trong repo để hiển thị đúng.*
 
@@ -32,11 +36,7 @@ Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 F
 ## 🚀 Cài đặt
 ```bash
 # Cài đặt ROS 2 Foxy trên Ubuntu 20.04
-sudo apt install ros-foxy-desktop
-
-# Tạo workspace
-mkdir -p ~/colcon_ws/src
-cd ~/colcon_ws/src
+(https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
 
 # Clone repo
 git clone https://github.com/Cao-Tien-Dat/Real-mobile-robot.git
