@@ -47,7 +47,7 @@ Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 F
 
 ## 🧩 Thành phần phần mềm chính
 
-- `odometry_publisher/`: Node đọc encoder từ ESP32 (UART), xuất bản `nav_msgs/Odometry`.
+- `ros2 control diffdrive_arduino`: Node đọc encoder từ ESP32 (UART), xuất bản `nav_msgs/Odometry`.
 - `robot_description/`: File URDF mô tả cấu trúc robot (base, bánh xe, lidar...).
 - `launch/`: Gồm 3 launch file chính:
   - `slam_toolbox_all_bringup.launch.py`
@@ -69,7 +69,7 @@ git clone https://github.com/Cao-Tien-Dat/Real-mobile-robot.git
 
 # Biên dịch
 cd ~/colcon_ws
-colcon build
+colcon build --symlink-install
 source install/setup.bash
 ````
 
