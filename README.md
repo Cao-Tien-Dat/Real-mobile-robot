@@ -1,5 +1,7 @@
+````markdown
 # 🤖 Real Mobile Robot
 ---
+
 ![image](https://github.com/user-attachments/assets/dba095c5-e330-4fcc-bf3f-af333f7754f1)
 
 ## 🛡️ Giấy phép & Từ chối trách nhiệm
@@ -39,7 +41,7 @@ Dự án này xây dựng một robot di động hai bánh sử dụng **ROS 2 F
 
 ### 📷 Hình ảnh robot
 
-![Real Robot](https://github.com/user-attachments/assets/632166e1-1cce-4fc4-a510-a40c349a663b)
+![Real Robot](https://github.com/user-attachments/assets/632166e1-1cce-4fc4-a510-a40c349a663b)  
 ![Sơ đồ phần cứng](https://github.com/user-attachments/assets/07672d40-98bf-4043-8ade-fe9123b17f3b)
 
 ---
@@ -70,3 +72,64 @@ git clone https://github.com/Cao-Tien-Dat/Real-mobile-robot.git
 cd ~/colcon_ws
 colcon build
 source install/setup.bash
+````
+
+---
+
+## ▶️ Cách chạy SLAM
+
+Sau khi đã `source install/setup.bash`, bạn có thể chạy các launch file tương ứng để khởi động hệ thống SLAM:
+
+```bash
+# Với SLAM Toolbox:
+ros2 launch my_bot slam_toolbox_all_bringup.launch.py
+
+# Với GMapping:
+ros2 launch my_bot slam_gmapping_all_bringup.launch.py
+
+# Với Cartographer:
+ros2 launch my_bot slam_cartographer_all_bringup.launch.py
+```
+
+> 📌 *Thay `my_bot` bằng tên package thực tế của bạn nếu đã đổi tên trong `package.xml`, ví dụ: `my_bot`.*
+> đây đã tích hợp nav2 vào rồi
+---
+
+## 📁 Cấu trúc thư mục
+
+```
+Real-mobile-robot/
+├── launch/                  # Các file launch ROS 2 cho SLAM
+├── odometry_publisher/     # Node đọc encoder từ ESP32 qua UART, xuất Odometry
+├── robot_description/      # URDF mô tả robot
+├── config/                 # File cấu hình (TF, SLAM, Nav2)
+├── maps/                   # Lưu bản đồ sau khi SLAM
+├── image/                  # Hình ảnh minh họa robot, sơ đồ kết nối
+└── README.md               # File mô tả này
+```
+
+---
+
+## 📦 Phụ thuộc
+
+Dự án yêu cầu các gói sau (nên cài qua `rosdep` hoặc build thủ công):
+
+* ROS 2 Foxy
+* `slam_toolbox`, `slam_gmapping`, `cartographer_ros`
+* `nav2_bringup`, `nav2_controller`, `nav2_planner`, ...
+* `robot_state_publisher`, `joint_state_publisher`
+* `teleop_twist_keyboard`
+* `rplidar_ros` (hoặc driver phù hợp với RPLIDAR C1)
+* `pyserial` (nếu cần UART từ máy tính)
+
+---
+
+## 📬 Liên hệ
+
+* **Tác giả:** Cao Tiến Đạt
+* **GitHub:** [https://github.com/Cao-Tien-Dat](https://github.com/Cao-Tien-Dat)
+
+---
+
+```
+```
