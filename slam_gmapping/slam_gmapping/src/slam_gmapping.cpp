@@ -79,9 +79,9 @@ void SlamGmapping::init() {
     srt_ = 0.2;
     str_ = 0.1;
     stt_ = 0.2;
-    linearUpdate_ = 1.0;
-    angularUpdate_ = 0.5;
-    temporalUpdate_ = 1.0;
+    linearUpdate_ = 0.2;
+    angularUpdate_ = 0.2;
+    temporalUpdate_ = 0.5;
     resampleThreshold_ = 0.5;
     particles_ = 30;
     xmin_ = -10.0;
